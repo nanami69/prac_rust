@@ -1,9 +1,9 @@
-extern crate minigrep;
+extern crate minigrep_nanami_20210502;
 
 use std::env;
 use std::process;
 
-use minigrep::Config;
+use minigrep_nanami_20210502::Config;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -13,7 +13,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(e) = minigrep::run(config) {
+    if let Err(e) = minigrep_nanami_20210502::run(config) {
         eprintln!("Application error: {}", e);
 
         process::exit(1);
